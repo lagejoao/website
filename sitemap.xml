@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<url>
+<loc>https://joaolage.com/building-tfrecords-dataset/</loc>
+<lastmod>2019-09-17T00:00:00-05:00</lastmod>
+</url>
+<url>
+<loc>https://joaolage.com/notes-simclr-framework</loc>
+<lastmod>2020-04-05T00:00:00-05:00</lastmod>
+</url>
+<url>
+<loc>https://joaolage.com/about/</loc>
+</url>
+<url>
+<loc>https://joaolage.com/</loc>
+</url>
+<url>
+<loc>https://joaolage.com/search/</loc>
+</url>
+<url>
+<loc>https://joaolage.com/categories/</loc>
+</url>
+</urlset>
