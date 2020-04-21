@@ -6,8 +6,8 @@
 # https://learn-the-web.algonquindesign.ca/topics/markdown-yaml-cheat-sheet/#yaml
 # https://learnxinyminutes.com/docs/yaml/
 
-title: Joao Lage | Data Scientist | ML Eng
-description: Personal page, hobbies and other random ideas
+title: Joao Lage
+description: Computers, software, machine learning, and other random thoughts.
 github_username: lagejoao
 # you can comment the below line out if your repo name is not different than your baseurl
 github_repo: "website"
