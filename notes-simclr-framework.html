@@ -210,7 +210,7 @@ window.onload = wrap_img;
 </li>
 <li><p>$\tilde{x}_i \text{and } \tilde{x}_j$ are transformed images</p>
 </li>
-<li><p>$\mathcal{t}$ is a sequentialy applied simple augmentations</p>
+<li><p>$\mathcal{t}$ is a sequentially applied simple augmentations</p>
 </li>
 <li><p>$\mathcal{T}$ is a set of simple augmentations</p>
 </li>
@@ -489,13 +489,13 @@ loss functions. “sh” means using semi-hard negative mining.</figcaption>
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h3 id="Image-preprocessing">Image preprocessing<a class="anchor-link" href="#Image-preprocessing"> </a></h3>$$
-\begin{align*}
-&amp;\textbf{for} \text{ sampled minibatch} \{x\}^{N}_{k=1} \textbf{ do}\\
-&amp;\ \ \textbf{for} \text{ all k} \in \{1, ... , N\} \textbf{ do}\\
-&amp;\ \ \ \ \text{draw two augmentation functions } \mathcal{t} \sim \mathcal{T}, \mathcal{t'} \sim \mathcal{T}\\
-&amp;\ \ \ \ \tilde{x}_{2k-1} = \mathcal{t(x_k)} \ \ \tilde{x}_{2k} = \mathcal{t'(x_k)}
-\end{align*}
-$$<p><code>preprocess_for_train</code> can be seen as $\mathcal{T}$ in the training setting. For aditional implementation details, see <a href="https://github.com/google-research/simclr/blob/master/data_util.py">simclr/data_util.py</a>.</p>
+\begin{aligned}
+\textbf{for}&amp; \text{ sampled minibatch } \{x\}^{N}_{k=1} \textbf{ do} \\
+\textbf{for}&amp; \text{ all k} \in \{1, ... , N\} \textbf{ do} \\
+&amp;\text{draw two augmentation functions } \mathcal{t} \sim \mathcal{T}, \mathcal{t'} \sim \mathcal{T} \\
+&amp;\tilde{x}_{2k-1} = \mathcal{t(x_k)} \; \; \tilde{x}_{2k} = \mathcal{t'(x_k)}
+\end{aligned}
+$$<p><code>preprocess_for_train</code> can be seen as $\mathcal{T}$ in the training setting. For additional implementation details, see <a href="https://github.com/google-research/simclr/blob/master/data_util.py">simclr/data_util.py</a><sup id="fnref-3" class="footnote-ref"><a href="#fn-3">3</a></sup>.</p>
 <div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">tensorflow</span> <span class="k">as</span> <span class="nn">tf</span>
 <span class="kn">from</span> <span class="nn">data_util</span> <span class="kn">import</span> <span class="n">random_crop_with_resize</span><span class="p">,</span> <span class="n">random_color_jitter</span>
 
@@ -542,7 +542,7 @@ $$ \ell_{i,j} = -\log \dfrac{\exp \mathsf{sim}(z_i, z_j) / \tau}{ \sum_{k=1}^{2N
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Where <code>x</code> and <code>v</code> can be $z_i$ and $z_j$, in no particular order. For aditional implementation details, see <a href="https://github.com/google-research/simclr/blob/master/objective.py">simclr/objective.py</a>.</p>
+<p>Where <code>x</code> and <code>v</code> can be $z_i$ and $z_j$, in no particular order. For additional implementation details, see <a href="https://github.com/google-research/simclr/blob/master/objective.py">simclr/objective.py</a>.</p>
 <div class="highlight"><pre><span></span><span class="n">LARGE_NUM</span> <span class="o">=</span> <span class="mf">1e9</span>
 
 <span class="k">def</span> <span class="nf">nt_xent_loss</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">v</span><span class="p">,</span> <span class="n">temperature</span><span class="o">=</span><span class="mf">1.0</span><span class="p">):</span>
@@ -588,7 +588,9 @@ $$ \ell_{i,j} = -\log \dfrac{\exp \mathsf{sim}(z_i, z_j) / \tau}{ \sum_{k=1}^{2N
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><div class="footnotes"><p id="fn-1">1. A Simple Framework for Contrastive Learning of Visual Representations. Chen, T., Kornblith, S., Norouzi, M., &amp; Hinton, G. - 2020<a href="#fnref-1" class="footnote footnotes">↩</a></p></div></p>
+<p><div class="footnotes"><p id="fn-1">1. A Simple Framework for Contrastive Learning of Visual Representations. Chen, T., Kornblith, S., Norouzi, M., &amp; Hinton, G. - 2020<a href="#fnref-1" class="footnote footnotes">↩</a></p></div>
+<div class="footnotes"><p id="fn-2">2. LARS, Large Batch Training of Convolutional Networks<a href="#fnref-2" class="footnote footnotes">↩</a></p></div>
+<div class="footnotes"><p id="fn-3">3. google-research/simclr - <a href="https://github.com/google-research/simclr">https://github.com/google-research/simclr</a><a href="#fnref-3" class="footnote footnotes">↩</a></p></div></p>
 
 </div>
 </div>
