@@ -11,3 +11,7 @@ My area of focus is Machine Learning and AI, where I have been developing and ap
 I am also very passionate for open source software, community driven solutions, traveling and life itself :)
 
 <img src="{{ site.baseurl }}/images/profile.jpg" style="display: block;margin-left: auto;margin-right: auto">
+
+This website is powered by **[fastpages](https://github.com/fastai/fastpages)** [^1].
+
+[^1]:a blogging platform that natively supports Jupyter notebooks in addition to other formats.
