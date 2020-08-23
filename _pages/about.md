@@ -2,12 +2,12 @@
 layout: page
 title: About Me
 permalink: /about/
---- 
+---
 
-I have an increasing curiosity towards computers, electronics and science. I hold a MSc in Electronics and Computer Engineering and I classify myself as a passionate for technology and science.
+This is where you put the contents of your *About* page. Like all your pages, it's in [Markdown](https://guides.github.com/features/mastering-markdown/) format.
 
-My area of focus is Machine Learning and AI, where I have been developing and applying state of the art research for the past 4 years, ranging from Data Analysis, NLP and Computer Vision.
+This website is powered by **[fastpages](https://github.com/fastai/fastpages)** [^1].
 
-I am also very passionate for open source software, community driven solutions, traveling and life itself :)
 
-<img src="{{ site.baseurl }}/images/profile.jpg" style="display: block;margin-left: auto;margin-right: auto">
+
+[^1]:a blogging platform that natively supports Jupyter notebooks in addition to other formats.
