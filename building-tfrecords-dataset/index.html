@@ -3,9 +3,9 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="twitter:card" content="summary" /><!-- Begin Jekyll SEO tag v2.6.1 -->
+  <meta name="twitter:card" content="summary_large_image" /><!-- Begin Jekyll SEO tag v2.6.1 -->
 <title>Building a TFRecords dataset | Joao Lage</title>
-<meta name="generator" content="Jekyll v4.0.0" />
+<meta name="generator" content="Jekyll v4.1.1" />
 <meta property="og:title" content="Building a TFRecords dataset" />
 <meta name="author" content="Joao Lage" />
 <meta property="og:locale" content="en_US" />
@@ -21,35 +21,14 @@
 <meta name="twitter:site" content="@_joaolage" />
 <meta name="twitter:creator" content="@Joao Lage" />
 <script type="application/ld+json">
-{"author":{"@type":"Person","name":"Joao Lage"},"description":"How do I changed my dataset creation method","@type":"BlogPosting","url":"https://joaolage.com/building-tfrecords-dataset/","headline":"Building a TFRecords dataset","dateModified":"2019-09-17T00:00:00-05:00","datePublished":"2019-09-17T00:00:00-05:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://joaolage.com/building-tfrecords-dataset/"},"@context":"https://schema.org"}</script>
+{"url":"https://joaolage.com/building-tfrecords-dataset/","@type":"BlogPosting","headline":"Building a TFRecords dataset","dateModified":"2019-09-17T00:00:00-05:00","datePublished":"2019-09-17T00:00:00-05:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://joaolage.com/building-tfrecords-dataset/"},"author":{"@type":"Person","name":"Joao Lage"},"description":"How do I changed my dataset creation method","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
-<link rel="stylesheet" href="/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="https://joaolage.com/feed.xml" title="Joao Lage" /><link rel="shortcut icon" type="image/x-icon" href="/images/favicon.ico"><!-- Begin Jekyll SEO tag v2.6.1 -->
-<title>Building a TFRecords dataset | Joao Lage</title>
-<meta name="generator" content="Jekyll v4.0.0" />
-<meta property="og:title" content="Building a TFRecords dataset" />
-<meta name="author" content="Joao Lage" />
-<meta property="og:locale" content="en_US" />
-<meta name="description" content="How do I changed my dataset creation method" />
-<meta property="og:description" content="How do I changed my dataset creation method" />
-<link rel="canonical" href="https://joaolage.com/building-tfrecords-dataset/" />
-<meta property="og:url" content="https://joaolage.com/building-tfrecords-dataset/" />
-<meta property="og:site_name" content="Joao Lage" />
-<meta property="og:type" content="article" />
-<meta property="article:published_time" content="2019-09-17T00:00:00-05:00" />
-<meta name="twitter:card" content="summary" />
-<meta property="twitter:title" content="Building a TFRecords dataset" />
-<meta name="twitter:site" content="@_joaolage" />
-<meta name="twitter:creator" content="@Joao Lage" />
-<script type="application/ld+json">
-{"author":{"@type":"Person","name":"Joao Lage"},"description":"How do I changed my dataset creation method","@type":"BlogPosting","url":"https://joaolage.com/building-tfrecords-dataset/","headline":"Building a TFRecords dataset","dateModified":"2019-09-17T00:00:00-05:00","datePublished":"2019-09-17T00:00:00-05:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://joaolage.com/building-tfrecords-dataset/"},"@context":"https://schema.org"}</script>
-<!-- End Jekyll SEO tag -->
-
-<link href="https://unpkg.com/@primer/css/dist/primer.css" rel="stylesheet" />
-<link rel="stylesheet" href="//use.fontawesome.com/releases/v5.0.7/css/all.css"><link type="application/atom+xml" rel="alternate" href="https://joaolage.com/feed.xml" title="Joao Lage" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.css" integrity="sha384-zB1R0rpPzHqg7Kpt0Aljp8JPLqbXI3bhnPWROx27a9N0Ll6ZP/+DiW/UqRcLbRjq" crossorigin="anonymous">
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML"> </script>
-    <script src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.js" integrity="sha384-y23I5Q6l+B6vatafAwxRu/0oK/79VlbSz7Q9aiSZUvyWYIYsd+qj+o24G5ZU2zJz" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/contrib/auto-render.min.js" integrity="sha384-kWPLUVMOks5AQFrykwIup5lo0m3iMkkHrD0uJ4H5cjeGihAutqP0yW0J6dpFiVkI" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="https://joaolage.com/feed.xml" title="Joao Lage" /><link rel="shortcut icon" type="image/x-icon" href="/images/favicon.ico"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Primer/15.2.0/primer.css" integrity="sha512-xTz2ys4coGAOz8vuV1NcQBkgVmKhsSEtjbqyMJbBHRplFuvKIUo6xhLHpAyPt9mfR6twHJgn9OgVLuqOvjeBhg==" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.12.0/katex.min.css" integrity="sha512-h7nl+xz8wgDlNM4NqKEM4F1NkIRS17M9+uJwIGwuo8vGqIl4BhuCKdxjWEINm+xyrUjNCnK5dCrhM0sj+wTIXw==" crossorigin="anonymous" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.12.0/katex.min.js" integrity="sha512-/CMIhXiDA3m2c9kzRyd97MTb3MC6OVnx4TElQ7fkkoRghwDf6gi41gaT1PwF270W6+J60uTmwgeRpNpJdRV6sg==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.12.0/contrib/auto-render.min.js" integrity="sha512-Do7uJAaHZm5OLrIv/yN4w0iG1dbu01kzdMNnFfu/mAqgUk6Nniv2JYHcwH+cNwjqgLcqcuBBk+JRvprLVI8azg==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js" integrity="sha512-0doc9hKxR3PYwso42RD1p5ySZpzzuDiOwMrdCEh2WdJZCjcmFKc/wEnL+z8fBQrnHoiNWbo+3fiGkOYXBdQp4A==" crossorigin="anonymous"></script>
     <script>
     document.addEventListener("DOMContentLoaded", function() {
         renderMathInElement( document.body, {
@@ -187,39 +166,39 @@ src: <a href="https://www.tensorflow.org/tutorials/load_data/tf_records">TFRecor
 <h3 id="how-do-i-start">
 <a class="anchor" href="#how-do-i-start" aria-hidden="true"><span class="octicon octicon-link"></span></a>How do I start?</h3>
 <p>Let’s pretend our dataset is made of images, descriptions and labels. Labels will be our targets for future use.
-First we will need to define a protobuf and <code class="highlighter-rouge">tf.train.Example</code> will ease that work for us:</p>
+First we will need to define a protobuf and <code class="language-plaintext highlighter-rouge">tf.train.Example</code> will ease that work for us:</p>
 
 <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">tensorflow</span> <span class="k">as</span> <span class="n">tf</span>
 
 
 <span class="k">def</span> <span class="nf">serialize_example</span><span class="p">(</span><span class="n">image</span><span class="p">,</span> <span class="n">description</span><span class="p">,</span> <span class="n">label</span><span class="p">):</span>
     <span class="n">feature</span> <span class="o">=</span> <span class="p">{</span>
-        <span class="s">"description_index"</span><span class="p">:</span> <span class="n">tf</span><span class="o">.</span><span class="n">train</span><span class="o">.</span><span class="n">Feature</span><span class="p">(</span>
-            <span class="n">int64_list</span><span class="o">=</span><span class="n">tf</span><span class="o">.</span><span class="n">train</span><span class="o">.</span><span class="n">Int64List</span><span class="p">(</span><span class="n">value</span><span class="o">=</span><span class="n">description</span><span class="o">.</span><span class="n">indices</span><span class="p">)</span>
+        <span class="s">"description_index"</span><span class="p">:</span> <span class="n">tf</span><span class="p">.</span><span class="n">train</span><span class="p">.</span><span class="n">Feature</span><span class="p">(</span>
+            <span class="n">int64_list</span><span class="o">=</span><span class="n">tf</span><span class="p">.</span><span class="n">train</span><span class="p">.</span><span class="n">Int64List</span><span class="p">(</span><span class="n">value</span><span class="o">=</span><span class="n">description</span><span class="p">.</span><span class="n">indices</span><span class="p">)</span>
         <span class="p">),</span>
-        <span class="s">"description_value"</span><span class="p">:</span> <span class="n">tf</span><span class="o">.</span><span class="n">train</span><span class="o">.</span><span class="n">Feature</span><span class="p">(</span>
-            <span class="n">int64_list</span><span class="o">=</span><span class="n">tf</span><span class="o">.</span><span class="n">train</span><span class="o">.</span><span class="n">Int64List</span><span class="p">(</span><span class="n">value</span><span class="o">=</span><span class="n">description</span><span class="o">.</span><span class="n">data</span><span class="p">)</span>
+        <span class="s">"description_value"</span><span class="p">:</span> <span class="n">tf</span><span class="p">.</span><span class="n">train</span><span class="p">.</span><span class="n">Feature</span><span class="p">(</span>
+            <span class="n">int64_list</span><span class="o">=</span><span class="n">tf</span><span class="p">.</span><span class="n">train</span><span class="p">.</span><span class="n">Int64List</span><span class="p">(</span><span class="n">value</span><span class="o">=</span><span class="n">description</span><span class="p">.</span><span class="n">data</span><span class="p">)</span>
         <span class="p">),</span>
-        <span class="s">"image"</span><span class="p">:</span> <span class="n">tf</span><span class="o">.</span><span class="n">train</span><span class="o">.</span><span class="n">Feature</span><span class="p">(</span>
-            <span class="n">bytes_list</span><span class="o">=</span><span class="n">tf</span><span class="o">.</span><span class="n">train</span><span class="o">.</span><span class="n">BytesList</span><span class="p">(</span><span class="n">value</span><span class="o">=</span><span class="p">[</span><span class="n">image</span><span class="p">])</span>
+        <span class="s">"image"</span><span class="p">:</span> <span class="n">tf</span><span class="p">.</span><span class="n">train</span><span class="p">.</span><span class="n">Feature</span><span class="p">(</span>
+            <span class="n">bytes_list</span><span class="o">=</span><span class="n">tf</span><span class="p">.</span><span class="n">train</span><span class="p">.</span><span class="n">BytesList</span><span class="p">(</span><span class="n">value</span><span class="o">=</span><span class="p">[</span><span class="n">image</span><span class="p">])</span>
         <span class="p">),</span>
-        <span class="s">"label"</span><span class="p">:</span> <span class="n">tf</span><span class="o">.</span><span class="n">train</span><span class="o">.</span><span class="n">Feature</span><span class="p">(</span><span class="n">int64_list</span><span class="o">=</span><span class="n">tf</span><span class="o">.</span><span class="n">train</span><span class="o">.</span><span class="n">Int64List</span><span class="p">(</span><span class="n">value</span><span class="o">=</span><span class="p">[</span><span class="n">label</span><span class="p">])),</span>
+        <span class="s">"label"</span><span class="p">:</span> <span class="n">tf</span><span class="p">.</span><span class="n">train</span><span class="p">.</span><span class="n">Feature</span><span class="p">(</span><span class="n">int64_list</span><span class="o">=</span><span class="n">tf</span><span class="p">.</span><span class="n">train</span><span class="p">.</span><span class="n">Int64List</span><span class="p">(</span><span class="n">value</span><span class="o">=</span><span class="p">[</span><span class="n">label</span><span class="p">])),</span>
     <span class="p">}</span>
 
-    <span class="n">example_proto</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">train</span><span class="o">.</span><span class="n">Example</span><span class="p">(</span><span class="n">features</span><span class="o">=</span><span class="n">tf</span><span class="o">.</span><span class="n">train</span><span class="o">.</span><span class="n">Features</span><span class="p">(</span><span class="n">feature</span><span class="o">=</span><span class="n">feature</span><span class="p">))</span>
-    <span class="k">return</span> <span class="n">example_proto</span><span class="o">.</span><span class="n">SerializeToString</span><span class="p">()</span>
+    <span class="n">example_proto</span> <span class="o">=</span> <span class="n">tf</span><span class="p">.</span><span class="n">train</span><span class="p">.</span><span class="n">Example</span><span class="p">(</span><span class="n">features</span><span class="o">=</span><span class="n">tf</span><span class="p">.</span><span class="n">train</span><span class="p">.</span><span class="n">Features</span><span class="p">(</span><span class="n">feature</span><span class="o">=</span><span class="n">feature</span><span class="p">))</span>
+    <span class="k">return</span> <span class="n">example_proto</span><span class="p">.</span><span class="n">SerializeToString</span><span class="p">()</span>
 </code></pre></div></div>
 
 <p>The above snippet creates a structure holding a sparse vector representation for textual descriptions, a byte string for images and a list for labels . If you want to encode your text as a sequence you can easily do it without the need of having both indices and values - just values will be enough.</p>
 
 <p>In regard to images, this example assumes that each image was downloaded, resized and saved previously into disk and can be loaded through its image path.</p>
 
-<p>At the moment, TFRecords support <a href="https://www.tensorflow.org/tutorials/load_data/tf_records#data_types_for_tfexample">three generic types</a>, <code class="highlighter-rouge">BytesList</code>, <code class="highlighter-rouge">FloatList</code> and <code class="highlighter-rouge">Int64List</code>, but they can be coerced into many other data types.</p>
+<p>At the moment, TFRecords support <a href="https://www.tensorflow.org/tutorials/load_data/tf_records#data_types_for_tfexample">three generic types</a>, <code class="language-plaintext highlighter-rouge">BytesList</code>, <code class="language-plaintext highlighter-rouge">FloatList</code> and <code class="language-plaintext highlighter-rouge">Int64List</code>, but they can be coerced into many other data types.</p>
 
 <h2 id="how-do-i-create-a-tfrecords-file">
 <a class="anchor" href="#how-do-i-create-a-tfrecords-file" aria-hidden="true"><span class="octicon octicon-link"></span></a>How do I create a TFRecords file?</h2>
 
-<p>After having the dataset split and the vectorisers fitted, you can loop through the data splits, create a binary representation of each data point and save it to a <code class="highlighter-rouge">.tfrecords</code> file:</p>
+<p>After having the dataset split and the vectorisers fitted, you can loop through the data splits, create a binary representation of each data point and save it to a <code class="language-plaintext highlighter-rouge">.tfrecords</code> file:</p>
 
 <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">os</span>
 <span class="kn">import</span> <span class="nn">cv2</span>
@@ -227,54 +206,54 @@ First we will need to define a protobuf and <code class="highlighter-rouge">tf.t
 
 <span class="n">datasets</span> <span class="o">=</span> <span class="p">[(</span><span class="n">train</span><span class="p">,</span> <span class="s">"train"</span><span class="p">),</span> <span class="p">(</span><span class="n">val</span><span class="p">,</span> <span class="s">"val"</span><span class="p">),</span> <span class="p">(</span><span class="n">test</span><span class="p">,</span> <span class="s">"test"</span><span class="p">)]</span>
 <span class="k">for</span> <span class="n">dataset</span><span class="p">,</span> <span class="n">file_name</span> <span class="ow">in</span> <span class="n">datasets</span><span class="p">:</span>
-    <span class="n">file_path</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">output_dir</span><span class="p">,</span> <span class="n">file_name</span> <span class="o">+</span> <span class="s">".tfrecords"</span><span class="p">)</span>
-    <span class="k">with</span> <span class="n">tf</span><span class="o">.</span><span class="n">python_io</span><span class="o">.</span><span class="n">TFRecordWriter</span><span class="p">(</span><span class="n">file_path</span><span class="p">)</span> <span class="k">as</span> <span class="n">writer</span><span class="p">:</span>
+    <span class="n">file_path</span> <span class="o">=</span> <span class="n">os</span><span class="p">.</span><span class="n">path</span><span class="p">.</span><span class="n">join</span><span class="p">(</span><span class="n">output_dir</span><span class="p">,</span> <span class="n">file_name</span> <span class="o">+</span> <span class="s">".tfrecords"</span><span class="p">)</span>
+    <span class="k">with</span> <span class="n">tf</span><span class="p">.</span><span class="n">python_io</span><span class="p">.</span><span class="n">TFRecordWriter</span><span class="p">(</span><span class="n">file_path</span><span class="p">)</span> <span class="k">as</span> <span class="n">writer</span><span class="p">:</span>
         <span class="k">for</span> <span class="n">row</span> <span class="ow">in</span> <span class="n">dataset</span><span class="p">:</span>
-            <span class="n">img</span> <span class="o">=</span> <span class="n">cv2</span><span class="o">.</span><span class="n">imread</span><span class="p">(</span><span class="n">row</span><span class="p">[</span><span class="s">"image_path"</span><span class="p">])</span><span class="o">.</span><span class="n">tobytes</span><span class="p">()</span>
+            <span class="n">img</span> <span class="o">=</span> <span class="n">cv2</span><span class="p">.</span><span class="n">imread</span><span class="p">(</span><span class="n">row</span><span class="p">[</span><span class="s">"image_path"</span><span class="p">]).</span><span class="n">tobytes</span><span class="p">()</span>
 
-            <span class="n">description</span> <span class="o">=</span> <span class="n">text_encoder</span><span class="o">.</span><span class="n">transform</span><span class="p">(</span>
+            <span class="n">description</span> <span class="o">=</span> <span class="n">text_encoder</span><span class="p">.</span><span class="n">transform</span><span class="p">(</span>
                 <span class="p">[</span><span class="n">row</span><span class="p">[</span><span class="s">"description"</span><span class="p">]]</span>
             <span class="p">)</span>
 
-            <span class="n">label_encoded</span> <span class="o">=</span> <span class="n">label_encoder</span><span class="o">.</span><span class="n">transform</span><span class="p">(</span><span class="n">row</span><span class="p">[</span><span class="s">"label"</span><span class="p">])</span>
+            <span class="n">label_encoded</span> <span class="o">=</span> <span class="n">label_encoder</span><span class="p">.</span><span class="n">transform</span><span class="p">(</span><span class="n">row</span><span class="p">[</span><span class="s">"label"</span><span class="p">])</span>
 
             <span class="n">example</span> <span class="o">=</span> <span class="n">serialize_example</span><span class="p">(</span><span class="n">image</span><span class="p">,</span> <span class="n">description</span><span class="p">,</span> <span class="n">label</span><span class="p">)</span>
-            <span class="n">writer</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">example</span><span class="p">)</span>
+            <span class="n">writer</span><span class="p">.</span><span class="n">write</span><span class="p">(</span><span class="n">example</span><span class="p">)</span>
 </code></pre></div></div>
 
-<p>For reproducibility purposes, <code class="highlighter-rouge">text_encoder</code> is a <a href="https://scikit-learn.org/stable/modules/generated/sklearn.feature_extraction.text.CountVectorizer.html">CountVectorizer</a> object and <code class="highlighter-rouge">label_encoder</code> is a <a href="https://scikit-learn.org/stable/modules/generated/sklearn.preprocessing.LabelBinarizer.html">LabelBinarizer</a> object.</p>
+<p>For reproducibility purposes, <code class="language-plaintext highlighter-rouge">text_encoder</code> is a <a href="https://scikit-learn.org/stable/modules/generated/sklearn.feature_extraction.text.CountVectorizer.html">CountVectorizer</a> object and <code class="language-plaintext highlighter-rouge">label_encoder</code> is a <a href="https://scikit-learn.org/stable/modules/generated/sklearn.preprocessing.LabelBinarizer.html">LabelBinarizer</a> object.</p>
 
 <div class="Toast">
-   <span class="Toast-icon"><svg class="octicon octicon-info" viewbox="0 0 14 16" version="1.1" width="14" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M6.3 5.69a.942.942 0 01-.28-.7c0-.28.09-.52.28-.7.19-.18.42-.28.7-.28.28 0 .52.09.7.28.18.19.28.42.28.7 0 .28-.09.52-.28.7a1 1 0 01-.7.3c-.28 0-.52-.11-.7-.3zM8 7.99c-.02-.25-.11-.48-.31-.69-.2-.19-.42-.3-.69-.31H6c-.27.02-.48.13-.69.31-.2.2-.3.44-.31.69h1v3c.02.27.11.5.31.69.2.2.42.31.69.31h1c.27 0 .48-.11.69-.31.2-.19.3-.42.31-.69H8V7.98v.01zM7 2.3c-3.14 0-5.7 2.54-5.7 5.68 0 3.14 2.56 5.7 5.7 5.7s5.7-2.55 5.7-5.7c0-3.15-2.56-5.69-5.7-5.69v.01zM7 .98c3.86 0 7 3.14 7 7s-3.14 7-7 7-7-3.12-7-7 3.14-7 7-7z"></path></svg></span>
+   <span class="Toast-icon"><svg class="octicon octicon-info" viewbox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M8 1.5a6.5 6.5 0 100 13 6.5 6.5 0 000-13zM0 8a8 8 0 1116 0A8 8 0 010 8zm6.5-.25A.75.75 0 017.25 7h1a.75.75 0 01.75.75v2.75h.25a.75.75 0 010 1.5h-2a.75.75 0 010-1.5h.25v-2h-.25a.75.75 0 01-.75-.75zM8 6a1 1 0 100-2 1 1 0 000 2z"></path></svg></span>
    <span class="Toast-content">In case of using encoders for text and/or targets, I recommend to save their configuration in order to dynamically load the number of unique tokens and/or classes when training a model.</span>
 </div>
 
-<p>After running the snippets above you will create three files <code class="highlighter-rouge">train.tfrecords</code>, <code class="highlighter-rouge">val.tfrecords</code> and <code class="highlighter-rouge">test.tfrecords</code>!</p>
+<p>After running the snippets above you will create three files <code class="language-plaintext highlighter-rouge">train.tfrecords</code>, <code class="language-plaintext highlighter-rouge">val.tfrecords</code> and <code class="language-plaintext highlighter-rouge">test.tfrecords</code>!</p>
 
 <h2 id="how-do-i-read-a-tfrecord-file">
 <a class="anchor" href="#how-do-i-read-a-tfrecord-file" aria-hidden="true"><span class="octicon octicon-link"></span></a>How do I read a TFRecord file?</h2>
 <p>First we need to create a representation of the feature we want to decode from each TFRecord:</p>
 
 <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">feature_description</span> <span class="o">=</span> <span class="p">{</span>
-    <span class="s">'label'</span><span class="p">:</span> <span class="n">tf</span><span class="o">.</span><span class="n">FixedLenFeature</span><span class="p">([],</span> <span class="n">tf</span><span class="o">.</span><span class="n">int64</span><span class="p">,</span> <span class="n">default_value</span><span class="o">=</span><span class="mi">0</span><span class="p">),</span>
-    <span class="s">'image'</span><span class="p">:</span> <span class="n">tf</span><span class="o">.</span><span class="n">FixedLenFeature</span><span class="p">([],</span> <span class="n">tf</span><span class="o">.</span><span class="n">string</span><span class="p">),</span>
-    <span class="s">'description'</span><span class="p">:</span> <span class="n">tf</span><span class="o">.</span><span class="n">SparseFeature</span><span class="p">(</span><span class="n">index_key</span><span class="o">=</span><span class="s">"description_index"</span><span class="p">,</span> <span class="n">value_key</span><span class="o">=</span><span class="s">"description_value"</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="n">tf</span><span class="o">.</span><span class="n">int64</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="n">description_max_features</span><span class="p">),</span>
+    <span class="s">'label'</span><span class="p">:</span> <span class="n">tf</span><span class="p">.</span><span class="n">FixedLenFeature</span><span class="p">([],</span> <span class="n">tf</span><span class="p">.</span><span class="n">int64</span><span class="p">,</span> <span class="n">default_value</span><span class="o">=</span><span class="mi">0</span><span class="p">),</span>
+    <span class="s">'image'</span><span class="p">:</span> <span class="n">tf</span><span class="p">.</span><span class="n">FixedLenFeature</span><span class="p">([],</span> <span class="n">tf</span><span class="p">.</span><span class="n">string</span><span class="p">),</span>
+    <span class="s">'description'</span><span class="p">:</span> <span class="n">tf</span><span class="p">.</span><span class="n">SparseFeature</span><span class="p">(</span><span class="n">index_key</span><span class="o">=</span><span class="s">"description_index"</span><span class="p">,</span> <span class="n">value_key</span><span class="o">=</span><span class="s">"description_value"</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="n">tf</span><span class="p">.</span><span class="n">int64</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="n">description_max_features</span><span class="p">),</span>
 <span class="p">}</span>
 </code></pre></div></div>
 
-<p>Luckily we have the ability to turn an array of indices and an array of values into a sparse feature without much hassle with <code class="highlighter-rouge">tf.SparseFeature</code>, just by specifying where to read the indices, values and the maximum length of the sparse representation. Please note that for every example: <code class="highlighter-rouge">len(indices) == len(values)</code> and <code class="highlighter-rouge">indices</code> should be contained in <code class="highlighter-rouge">[0,...,max_features-1]</code>.</p>
+<p>Luckily we have the ability to turn an array of indices and an array of values into a sparse feature without much hassle with <code class="language-plaintext highlighter-rouge">tf.SparseFeature</code>, just by specifying where to read the indices, values and the maximum length of the sparse representation. Please note that for every example: <code class="language-plaintext highlighter-rouge">len(indices) == len(values)</code> and <code class="language-plaintext highlighter-rouge">indices</code> should be contained in <code class="language-plaintext highlighter-rouge">[0,...,max_features-1]</code>.</p>
 
 <p>Then we create a parsing function that reads the byte string of each example and decodes it:</p>
 
 <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">_parse_function</span><span class="p">(</span><span class="n">example_proto</span><span class="p">):</span>
-    <span class="n">example</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">parse_single_example</span><span class="p">(</span><span class="n">example_proto</span><span class="p">,</span> <span class="n">feature_description</span><span class="p">)</span>
+    <span class="n">example</span> <span class="o">=</span> <span class="n">tf</span><span class="p">.</span><span class="n">parse_single_example</span><span class="p">(</span><span class="n">example_proto</span><span class="p">,</span> <span class="n">feature_description</span><span class="p">)</span>
 
     <span class="n">label</span> <span class="o">=</span> <span class="n">example</span><span class="p">[</span><span class="s">"label"</span><span class="p">]</span>
     <span class="n">description</span> <span class="o">=</span> <span class="n">example</span><span class="p">[</span><span class="s">"description"</span><span class="p">]</span>
     
-    <span class="n">image_shape</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">constant</span><span class="p">([</span><span class="mi">128</span><span class="p">,</span> <span class="mi">128</span><span class="p">,</span> <span class="mi">3</span><span class="p">])</span>
-    <span class="n">image</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">decode_raw</span><span class="p">(</span><span class="n">example</span><span class="p">[</span><span class="s">"image"</span><span class="p">],</span> <span class="n">tf</span><span class="o">.</span><span class="n">uint8</span><span class="p">)</span>
-    <span class="n">image</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="n">image</span><span class="p">,</span> <span class="n">image_shape</span><span class="p">)</span>
+    <span class="n">image_shape</span> <span class="o">=</span> <span class="n">tf</span><span class="p">.</span><span class="n">constant</span><span class="p">([</span><span class="mi">128</span><span class="p">,</span> <span class="mi">128</span><span class="p">,</span> <span class="mi">3</span><span class="p">])</span>
+    <span class="n">image</span> <span class="o">=</span> <span class="n">tf</span><span class="p">.</span><span class="n">decode_raw</span><span class="p">(</span><span class="n">example</span><span class="p">[</span><span class="s">"image"</span><span class="p">],</span> <span class="n">tf</span><span class="p">.</span><span class="n">uint8</span><span class="p">)</span>
+    <span class="n">image</span> <span class="o">=</span> <span class="n">tf</span><span class="p">.</span><span class="n">reshape</span><span class="p">(</span><span class="n">image</span><span class="p">,</span> <span class="n">image_shape</span><span class="p">)</span>
     
     <span class="k">return</span> <span class="p">{</span>
         <span class="s">"description"</span><span class="p">:</span> <span class="n">description</span><span class="p">,</span>
@@ -288,27 +267,27 @@ First we will need to define a protobuf and <code class="highlighter-rouge">tf.t
 
 <p>If using an image model initialised with imagenet weights you should subtract the channel mean on each pixel using the below function. Also, channels will be swapped from RGB to BGR. This preprocessing stage guarantees that you will be sourcing images to the model following the same pixel value distribution per channel from the imagenet’s dataset.</p>
 
-<p>The code block below is a simplified version of the current Keras <a href="https://github.com/keras-team/keras-applications/blob/master/keras_applications/imagenet_utils.py#L93">implementation</a> that assumes the <code class="highlighter-rouge">x</code> tensor to have color channels in the last dimension and channels input order should be RGB.</p>
+<p>The code block below is a simplified version of the current Keras <a href="https://github.com/keras-team/keras-applications/blob/master/keras_applications/imagenet_utils.py#L93">implementation</a> that assumes the <code class="language-plaintext highlighter-rouge">x</code> tensor to have color channels in the last dimension and channels input order should be RGB.</p>
 
 <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">preprocess_symbolic_input</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
-    <span class="n">backend</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">keras</span><span class="o">.</span><span class="n">backend</span>
+    <span class="n">backend</span> <span class="o">=</span> <span class="n">tf</span><span class="p">.</span><span class="n">keras</span><span class="p">.</span><span class="n">backend</span>
     <span class="n">data_format</span> <span class="o">=</span> <span class="s">"channels_last"</span>
 
     <span class="c1"># 'RGB'-&gt;'BGR'
-</span>    <span class="n">x</span> <span class="o">=</span> <span class="n">x</span><span class="p">[</span><span class="o">...</span><span class="p">,</span> <span class="p">::</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+</span>    <span class="n">x</span> <span class="o">=</span> <span class="n">x</span><span class="p">[...,</span> <span class="p">::</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
     <span class="n">mean</span> <span class="o">=</span> <span class="p">[</span><span class="mf">103.939</span><span class="p">,</span> <span class="mf">116.779</span><span class="p">,</span> <span class="mf">123.68</span><span class="p">]</span>
 
-    <span class="n">mean_tensor</span> <span class="o">=</span> <span class="n">backend</span><span class="o">.</span><span class="n">constant</span><span class="p">(</span><span class="o">-</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">mean</span><span class="p">))</span>
+    <span class="n">mean_tensor</span> <span class="o">=</span> <span class="n">backend</span><span class="p">.</span><span class="n">constant</span><span class="p">(</span><span class="o">-</span><span class="n">np</span><span class="p">.</span><span class="n">array</span><span class="p">(</span><span class="n">mean</span><span class="p">))</span>
 
     <span class="c1"># Zero-center by mean pixel
-</span>    <span class="k">if</span> <span class="n">backend</span><span class="o">.</span><span class="n">dtype</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="o">!=</span> <span class="n">backend</span><span class="o">.</span><span class="n">dtype</span><span class="p">(</span><span class="n">mean_tensor</span><span class="p">):</span>
-        <span class="n">x</span> <span class="o">=</span> <span class="n">backend</span><span class="o">.</span><span class="n">bias_add</span><span class="p">(</span>
-            <span class="n">backend</span><span class="o">.</span><span class="n">cast</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">backend</span><span class="o">.</span><span class="n">dtype</span><span class="p">(</span><span class="n">mean_tensor</span><span class="p">)),</span>
+</span>    <span class="k">if</span> <span class="n">backend</span><span class="p">.</span><span class="n">dtype</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="o">!=</span> <span class="n">backend</span><span class="p">.</span><span class="n">dtype</span><span class="p">(</span><span class="n">mean_tensor</span><span class="p">):</span>
+        <span class="n">x</span> <span class="o">=</span> <span class="n">backend</span><span class="p">.</span><span class="n">bias_add</span><span class="p">(</span>
+            <span class="n">backend</span><span class="p">.</span><span class="n">cast</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">backend</span><span class="p">.</span><span class="n">dtype</span><span class="p">(</span><span class="n">mean_tensor</span><span class="p">)),</span>
             <span class="n">mean_tensor</span><span class="p">,</span>
             <span class="n">data_format</span><span class="o">=</span><span class="n">data_format</span><span class="p">,</span>
         <span class="p">)</span>
     <span class="k">else</span><span class="p">:</span>
-        <span class="n">x</span> <span class="o">=</span> <span class="n">backend</span><span class="o">.</span><span class="n">bias_add</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">mean_tensor</span><span class="p">,</span> <span class="n">data_format</span><span class="o">=</span><span class="s">"channels_last"</span><span class="p">)</span>
+        <span class="n">x</span> <span class="o">=</span> <span class="n">backend</span><span class="p">.</span><span class="n">bias_add</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">mean_tensor</span><span class="p">,</span> <span class="n">data_format</span><span class="o">=</span><span class="s">"channels_last"</span><span class="p">)</span>
 
     <span class="k">return</span> <span class="n">x</span>
 </code></pre></div></div>
@@ -316,10 +295,10 @@ First we will need to define a protobuf and <code class="highlighter-rouge">tf.t
 <p>Finally, we create an helper to reads the datasets:</p>
 
 <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">read_dataset</span><span class="p">(</span><span class="nb">file</span><span class="p">,</span> <span class="n">shuffle</span><span class="o">=</span><span class="bp">False</span><span class="p">,</span> <span class="n">batch_size</span><span class="o">=</span><span class="mi">64</span><span class="p">,</span> <span class="n">prefetch</span><span class="o">=</span><span class="mi">5</span><span class="p">):</span>
-    <span class="n">dataset</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">TFRecordDataset</span><span class="p">(</span><span class="nb">file</span><span class="p">)</span>
+    <span class="n">dataset</span> <span class="o">=</span> <span class="n">tf</span><span class="p">.</span><span class="n">data</span><span class="p">.</span><span class="n">TFRecordDataset</span><span class="p">(</span><span class="nb">file</span><span class="p">)</span>
     <span class="k">if</span> <span class="n">shuffle</span><span class="p">:</span>
-        <span class="n">dataset</span> <span class="o">=</span> <span class="n">dataset</span><span class="o">.</span><span class="n">shuffle</span><span class="p">()</span>
-    <span class="k">return</span> <span class="n">dataset</span><span class="o">.</span><span class="nb">map</span><span class="p">(</span><span class="n">_parse_function</span><span class="p">)</span>
+        <span class="n">dataset</span> <span class="o">=</span> <span class="n">dataset</span><span class="p">.</span><span class="n">shuffle</span><span class="p">()</span>
+    <span class="k">return</span> <span class="n">dataset</span><span class="p">.</span><span class="nb">map</span><span class="p">(</span><span class="n">_parse_function</span><span class="p">)</span>
 
 <span class="n">train_dataset</span> <span class="o">=</span> <span class="n">read_dataset</span><span class="p">(</span><span class="s">"train.tfrecords"</span><span class="p">)</span>
 <span class="n">val_dataset</span> <span class="o">=</span> <span class="n">read_dataset</span><span class="p">(</span><span class="s">"val.tfrecords"</span><span class="p">)</span>
@@ -328,22 +307,22 @@ First we will need to define a protobuf and <code class="highlighter-rouge">tf.t
 
 <h1 id="fitting-a-model">
 <a class="anchor" href="#fitting-a-model" aria-hidden="true"><span class="octicon octicon-link"></span></a>Fitting a model</h1>
-<p>A TFRecord dataset is also know by its versatility since it can be used when fitting a <code class="highlighter-rouge">tf.keras.Model</code> (see <a href="https://www.tensorflow.org/api_docs/python/tf/keras/Model#fit">docs</a>) and also when training an instance of <code class="highlighter-rouge">tf.estimator.Estimator</code> (see: <a href="https://www.tensorflow.org/api_docs/python/tf/estimator/Estimator">docs</a> and <a href="https://www.tensorflow.org/guide/estimators">guide</a>).</p>
+<p>A TFRecord dataset is also know by its versatility since it can be used when fitting a <code class="language-plaintext highlighter-rouge">tf.keras.Model</code> (see <a href="https://www.tensorflow.org/api_docs/python/tf/keras/Model#fit">docs</a>) and also when training an instance of <code class="language-plaintext highlighter-rouge">tf.estimator.Estimator</code> (see: <a href="https://www.tensorflow.org/api_docs/python/tf/estimator/Estimator">docs</a> and <a href="https://www.tensorflow.org/guide/estimators">guide</a>).</p>
 
 <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">input_fn_train</span><span class="p">(</span><span class="n">model_path</span><span class="p">,</span> <span class="n">batch_size</span><span class="p">):</span>
     <span class="n">dataset</span> <span class="o">=</span> <span class="n">read_dataset</span><span class="p">(</span><span class="n">model_path</span><span class="p">)</span>
-    <span class="n">dataset</span> <span class="o">=</span> <span class="n">dataset</span><span class="o">.</span><span class="n">repeat</span><span class="p">()</span>
-    <span class="n">dataset</span> <span class="o">=</span> <span class="n">dataset</span><span class="o">.</span><span class="n">shuffle</span><span class="p">(</span><span class="n">buffer_size</span><span class="o">=</span><span class="mi">5</span><span class="p">)</span>
-    <span class="n">dataset</span> <span class="o">=</span> <span class="n">dataset</span><span class="o">.</span><span class="n">batch</span><span class="p">(</span><span class="n">batch_size</span><span class="p">)</span>
-    <span class="k">return</span> <span class="n">dataset</span><span class="o">.</span><span class="n">prefetch</span><span class="p">(</span><span class="n">buffer_size</span><span class="o">=</span><span class="mi">5</span><span class="p">)</span>
+    <span class="n">dataset</span> <span class="o">=</span> <span class="n">dataset</span><span class="p">.</span><span class="n">repeat</span><span class="p">()</span>
+    <span class="n">dataset</span> <span class="o">=</span> <span class="n">dataset</span><span class="p">.</span><span class="n">shuffle</span><span class="p">(</span><span class="n">buffer_size</span><span class="o">=</span><span class="mi">5</span><span class="p">)</span>
+    <span class="n">dataset</span> <span class="o">=</span> <span class="n">dataset</span><span class="p">.</span><span class="n">batch</span><span class="p">(</span><span class="n">batch_size</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">dataset</span><span class="p">.</span><span class="n">prefetch</span><span class="p">(</span><span class="n">buffer_size</span><span class="o">=</span><span class="mi">5</span><span class="p">)</span>
 
 
 <span class="k">def</span> <span class="nf">input_fn_eval</span><span class="p">(</span><span class="n">model_path</span><span class="p">,</span> <span class="n">batch_size</span><span class="p">):</span>
     <span class="n">dataset</span> <span class="o">=</span> <span class="n">read_dataset</span><span class="p">(</span><span class="n">model_path</span><span class="p">)</span>
-    <span class="n">dataset</span> <span class="o">=</span> <span class="n">dataset</span><span class="o">.</span><span class="n">batch</span><span class="p">(</span><span class="n">batch_size</span><span class="p">)</span>
-    <span class="n">dataset</span> <span class="o">=</span> <span class="n">dataset</span><span class="o">.</span><span class="n">repeat</span><span class="p">()</span>
+    <span class="n">dataset</span> <span class="o">=</span> <span class="n">dataset</span><span class="p">.</span><span class="n">batch</span><span class="p">(</span><span class="n">batch_size</span><span class="p">)</span>
+    <span class="n">dataset</span> <span class="o">=</span> <span class="n">dataset</span><span class="p">.</span><span class="n">repeat</span><span class="p">()</span>
 
-    <span class="k">return</span> <span class="n">dataset</span><span class="o">.</span><span class="n">prefetch</span><span class="p">(</span><span class="n">buffer_size</span><span class="o">=</span><span class="mi">5</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">dataset</span><span class="p">.</span><span class="n">prefetch</span><span class="p">(</span><span class="n">buffer_size</span><span class="o">=</span><span class="mi">5</span><span class="p">)</span>
 </code></pre></div></div>
 
 <p>Voilà! You are now able to feed batches of tfrecords into your model!</p>
